@@ -24,13 +24,13 @@ function addRow(product) {
 <i class="bx bx-dots-vertical-rounded"></i>
 </button>
     <div class="dropdown-menu">
-        <a class="updateProduct" class="dropdown-item" data-id=${product.product_id} href="viewSingleProduct.html?id=${product.product_id}"><i class="bx bx-edit-alt me-1"></i> Edit</a
+        <a class="dropdown-item updateProduct" data-id=${product.product_id} href="viewSingleProduct.html?id=${product.product_id}"><i class="bx bx-edit-alt me-1"></i> Edit</a
 >
                             <a
                             data-id=${product.product_id}
-                            class="deleteProduct"
+                            
                             onClick="handleClick(${product.product_id})"
-                                   class="dropdown-item"
+                                   class="dropdown-item deleteProduct"
                                    href="javascript:void(0);"
                                    >Delete</a
                                  >
