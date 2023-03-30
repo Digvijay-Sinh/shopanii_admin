@@ -1,4 +1,6 @@
-const form = document.querySelector('form');
+const form = document.querySelector('#productForm');
+const imageData = document.querySelector('#imageString');
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // prevent form from submitting
@@ -9,7 +11,7 @@ form.addEventListener('submit', (event) => {
     const description = formData.get('description');
     const price = formData.get('price');
     const category_id = formData.get('category_id');
-    const image_url = "/abc.jpg"
+    const image_url = imageData.value;
     const data = {
         name,
         description,

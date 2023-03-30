@@ -16,7 +16,12 @@ function addRow(coupon) {
     cell1.innerHTML = tbody.rows.length; // Set the "#" column value to the new row index
     cell2.innerHTML = coupon.code;
     cell3.innerHTML = coupon.discount;
-    cell4.innerHTML = coupon.expiration_date;
+    // console.log(coupon.expiration_date);
+    const dateObj = new Date(coupon.expiration_date);
+
+    // Convert to local timezone and format as string in 'yyyy-mm-dd hh:mm:ss' format
+    const localDatetimeStr = dateObj.toLocaleString('en-US', { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }).replace(',', '');
+    cell4.innerHTML = localDatetimeStr;
 
     cell5.innerHTML = `<div class="dropdown">
     <button

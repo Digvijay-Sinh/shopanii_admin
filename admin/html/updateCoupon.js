@@ -8,7 +8,17 @@ axios.get(`http://localhost:5000/api/v1/coupons/${couponId}`)
         console.log(coupon);
         document.getElementById('couponCodeForm').value = coupon.code;
         document.getElementById('couponDiscountForm').value = coupon.discount;
-        document.getElementById('couponExpirationDateForm').value = coupon.expiration_date.slice(0, -1);
+        // const dateObj = new Date(coupon.expiration_date);
+
+        // // Convert to string in 'yyyy-mm-ddThh:mm' format
+        // const localDatetimeStr = dateObj.toISOString().slice(0, -1);
+        // const dbDatetimeStr = '2023-07-07 19:33:00'; // datetime string from the database
+        // const dbDatetime = moment.tz(dbDatetimeStr, 'YYYY-MM-DD HH:mm:ss', 'UTC'); // convert to a moment object in UTC timezone
+        // const localDatetime = dbDatetime.clone().tz('Asia/Kolkata');
+        const utcDatetime = new Date(coupon.expiration_date); // create a Date object in UTC timezone
+        const localDatetime = new Date(utcDatetime.getTime() + (330 * 60 * 1000));
+
+        document.getElementById('couponExpirationDateForm').value = localDatetime.toISOString().slice(0, -1);
 
         // Create a new Date object from the ISO string
         // var date = new Date(coupon.expiration_date);

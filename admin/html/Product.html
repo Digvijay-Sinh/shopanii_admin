@@ -237,9 +237,10 @@
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
-
-                                                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" multiple />
-                                                    <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">Button</button>
+                                                    <form id="addImageForm" action="">
+                                                        <input type="file" name="image" multiple class="form-control" id="imageString" aria-describedby="inputGroupFileAddon04" aria-label="Upload" multiple />
+                                                        <button onclick="addImage()" class="btn btn-outline-primary" type="button" id="addImagesButton">Button</button>
+                                                    </form>
                                                 </div>
                                                 <br>
                                                 <button type="submit" class="btn btn-primary">Add Product</button>
@@ -306,6 +307,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- js -->
     <script src="./addProduct.js"></script>
+    <script src="./addImage.js"></script>
 </body>
 
 </html>

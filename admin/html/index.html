@@ -475,7 +475,9 @@
                             </div>
                           </div>
                           <span>Sales</span>
-                          <h3 class="card-title text-nowrap mb-1">$4,679</h3>
+                          <h3 id="sales" class="card-title text-nowrap mb-1">
+                            $4,679
+                          </h3>
                         </div>
                       </div>
                     </div>
@@ -586,7 +588,7 @@
                 <div class="card">
                   <h5 class="card-header">Orders</h5>
                   <div class="table-responsive text-nowrap">
-                    <table class="table">
+                    <table id="ordersTable" class="table">
                       <thead>
                         <tr class="text-nowrap">
                           <th>#</th>
@@ -596,127 +598,15 @@
                           <th>Total Amount</th>
                           <th>Payment Status</th>
                           <th>Date Of Order</th>
-                          <th>Address</th>
+                          <!-- <th>Address</th>
                           <th>City</th>
                           <th>State</th>
                           <th>Phone Number</th>
                           <th>Email</th>
-                          <th>Action</th>
+                          <th>Action</th> -->
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>
-                            <div class="dropdown">
-                              <button
-                                type="button"
-                                class="btn p-0 dropdown-toggle hide-arrow"
-                                data-bs-toggle="dropdown"
-                              >
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                              </button>
-                              <div class="dropdown-menu">
-                                <a
-                                  class="dropdown-item"
-                                  href="javascript:void(0);"
-                                  ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                                >
-                                <a
-                                  class="dropdown-item"
-                                  href="javascript:void(0);"
-                                  ><i class="bx bx-trash me-1"></i> Delete</a
-                                >
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>
-                            <div class="dropdown">
-                              <button
-                                type="button"
-                                class="btn p-0 dropdown-toggle hide-arrow"
-                                data-bs-toggle="dropdown"
-                              >
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                              </button>
-                              <div class="dropdown-menu">
-                                <a
-                                  class="dropdown-item"
-                                  href="javascript:void(0);"
-                                  ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                                >
-                                <a
-                                  class="dropdown-item"
-                                  href="javascript:void(0);"
-                                  ><i class="bx bx-trash me-1"></i> Delete</a
-                                >
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>Table cell</td>
-                          <td>
-                            <div class="dropdown">
-                              <button
-                                type="button"
-                                class="btn p-0 dropdown-toggle hide-arrow"
-                                data-bs-toggle="dropdown"
-                              >
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                              </button>
-                              <div class="dropdown-menu">
-                                <a
-                                  class="dropdown-item"
-                                  href="javascript:void(0);"
-                                  ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                                >
-                                <a
-                                  class="dropdown-item"
-                                  href="javascript:void(0);"
-                                  ><i class="bx bx-trash me-1"></i> Delete</a
-                                >
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
+                      <tbody id="ordersTableBody"></tbody>
                     </table>
                   </div>
                 </div>
@@ -815,6 +705,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./getAndDeleteOrders.js"></script>
     <!-- js -->
     <!-- <script src="./connnect_to_node.js"></script> -->
   </body>
