@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-
-
 <html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title> Shoppanies.in | Admin User</title>
+    <title> Shoppanies.in | Admin Change Password</title>
 
     <meta name="description" content="" />
 
@@ -124,7 +122,7 @@
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
                     </li>
-                    <li class="menu-item ">
+                    <li class="menu-item active">
                         <a href="Product.html" class="menu-link">
                             <i class=""></i>
                             <div data-i18n="Analytics">Add Products</div>
@@ -148,7 +146,7 @@
                             <div data-i18n="Analytics">Add Coupons</div>
                         </a>
                     </li>
-                    <li class="menu-item active">
+                    <li class="menu-item ">
                         <a href="users.html" class="menu-link">
                             <i class=""></i>
                             <div data-i18n="Analytics">Users</div>
@@ -166,7 +164,6 @@
                             <div data-i18n="Analytics">Logout</div>
                         </a>
                     </li>
-
                 </ul>
             </aside>
 
@@ -192,66 +189,80 @@
                     <!-- Content -->
 
                     <div class="container-xxl flex-grow-1 container-p-y">
-                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Admin /</span> View Users</h4>
+                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Admin /</span> Change Password</h4>
 
-
-
-                        <!-- -----------
-                -              -
-                -    table     -
-                -              -
-                ------------ -->
                         <div class="row">
-                            <div class="card">
-                                <h5 class="card-header">Users</h5>
-                                <div class="table-responsive text-nowrap">
-                                    <table id="usersTable" class="table">
-                                        <thead>
-                                            <tr class="text-nowrap">
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Email</th>
-                                                <th>Phone Number</th>
-                                                <th>Address</th>
-                                                <th>City</th>
-                                                <th>State</th>
-                                                <th>Postel Code</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="usersTableBody">
-                                         
-                        </tbody>
-                      </table>
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <h5 class="card-header">Admin | Change password</h5>
+                                    <div class="card-body">
+                                        <form id="" action="" method="post">
+                                            <div class="form-password-toggle">
+                                                <label class="form-label" for="basic-default-password12">Old Password</label>
+                                                <div class="input-group">
+                                                  <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    id="basic-default-password12"
+                                                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                                    aria-describedby="basic-default-password2"
+                                                  />
+                                                  <span id="basic-default-password2" class="input-group-text cursor-pointer"
+                                                    ><i class="bx bx-hide"></i
+                                                  ></span>
+                                                </div>
+                                              </div>
+                                              <div class="form-password-toggle">
+                                                <label class="form-label" for="basic-default-password12">New Password</label>
+                                                <div class="input-group">
+                                                  <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    id="basic-default-password12"
+                                                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                                    aria-describedby="basic-default-password2"
+                                                  />
+                                                  <span id="basic-default-password2" class="input-group-text cursor-pointer"
+                                                    ><i class="bx bx-hide"></i
+                                                  ></span>
+                                                </div>
+                                              </div>
+                                              <br>
+                                              <button type="submit" class="btn btn-primary">Change Password</button>
+                                        </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+                        </div>
                     </div>
-                  </div>
-                  <!--/ Responsive Table -->
-
-                
-
-                  
-               
-
-               
                 </div>
-              </div>
+                <!-- / Content -->
+
+
+
+                <div class="content-backdrop fade"></div>
             </div>
-            <!-- / Content -->
-
-          
-
-            <div class="content-backdrop fade"></div>
-          </div>
-          <!-- Content wrapper -->
+            <!-- Content wrapper -->
 
 
         </div>
         <!-- / Layout page -->
-      </div>
+    </div>
 
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
 
@@ -279,7 +290,9 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- js -->
+    <script src="./addProduct.js"></script>
+    <script src="./addImage.js"></script>
+</body>
 
-    <script src="./getAndDeleteUsers.js"></script>
-  </body>
 </html>
